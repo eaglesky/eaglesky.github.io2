@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://eaglesky.github.io/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-25T14:50:33-07:00</updated>
+  <updated>2014-03-25T15:07:29-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -23,6 +23,11 @@
 <p>Just for test.</p>
 
 <h2>Just for test!</h2>
+
+<!-- more -->
+
+
+<h3>Hope you&rsquo;ll like my articles!</h3>
 ]]></content>
   </entry>
   
