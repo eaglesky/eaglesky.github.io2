@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Project | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/project/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T14:44:46-07:00</updated>
+  <updated>2014-03-27T14:48:37-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -18,7 +18,13 @@
     <link href="http://eaglesky.github.io/blog/2014/03/27/color-based-hand-gesture-recognition-on-android/"/>
     <updated>2014-03-27T14:40:57-07:00</updated>
     <id>http://eaglesky.github.io/blog/2014/03/27/color-based-hand-gesture-recognition-on-android</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>This is my course project for CS290I in UCSB. The aim is to detect and recognize
+user-defined gestures using the camera of Android phone. We developed a simple
+demo that let user call other applications using gestures to show the real time
+performance.</p>
+
+<!-- more -->
+
 ]]></content>
   </entry>
   
