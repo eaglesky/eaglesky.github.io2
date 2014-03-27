@@ -2,13 +2,13 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://eaglesky.github.io/blog/2014/03/25/my-first-blog-post/</loc>
-        <lastmod>2014-03-26T20:52:34-07:00</lastmod>
+        <lastmod>2014-03-27T14:44:39-07:00</lastmod>
     </url>
     <url>
         <loc>
             http://eaglesky.github.io/blog/2014/03/27/color-based-hand-gesture-recognition-on-android/
         </loc>
-        <lastmod>2014-03-27T14:41:38-07:00</lastmod>
+        <lastmod>2014-03-27T14:43:50-07:00</lastmod>
     </url>
     <url>
         <loc>http://eaglesky.github.io/projects/</loc>
@@ -20,7 +20,7 @@
     </url>
     <url>
         <loc>http://eaglesky.github.io/</loc>
-        <lastmod>2014-03-27T14:41:38-07:00</lastmod>
+        <lastmod>2014-03-27T14:44:39-07:00</lastmod>
     </url>
     <url>
         <loc>http://eaglesky.github.io/robots.txt</loc>
@@ -28,6 +28,6 @@
     </url>
     <url>
         <loc>http://eaglesky.github.io/blog/archives/</loc>
-        <lastmod>2014-03-27T14:41:38-07:00</lastmod>
+        <lastmod>2014-03-27T14:44:39-07:00</lastmod>
     </url>
 </urlset>

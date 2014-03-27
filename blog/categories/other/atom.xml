@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Other | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/other/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T14:41:48-07:00</updated>
+  <updated>2014-03-27T14:44:46-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -18,11 +18,11 @@
     <link href="http://eaglesky.github.io/blog/2014/03/25/my-first-blog-post/"/>
     <updated>2014-03-25T14:03:18-07:00</updated>
     <id>http://eaglesky.github.io/blog/2014/03/25/my-first-blog-post</id>
-    <content type="html"><![CDATA[<h1 id="this-is-my-first-blog-post-using-octopress-also-the-first-time-to-write-a-post-using-markdown">This is my first blog post using Octopress. Also the first time to write a post using Markdown.</h1>
+    <content type="html"><![CDATA[<h2 id="this-is-my-first-blog-post-using-octopress-also-the-first-time-to-write-a-post-using-markdown">This is my first blog post using Octopress. Also the first time to write a post using Markdown.</h2>
 
 <p>Just for test.</p>
 
-<h2 id="just-for-test">Just for test!</h2>
+<h3 id="just-for-test">Just for test!</h3>
 
 <!-- more -->
 
