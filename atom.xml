@@ -4,7 +4,7 @@
   <title><![CDATA[Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T14:54:09-07:00</updated>
+  <updated>2014-03-27T14:56:34-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -41,9 +41,9 @@ example, when the user is eating, his hands are probably dirty and greasy. It
 will be much better and safer for the screen if the user can still use the
 phone without touching it.</p>
 
-<p>Our project aims to detect hand gestures using the camera of Android phone and
-recognize them using SVM classifier. Note that we only consider the static
-gestures, which essentially are hand postures. The app we developed also maps
+<p>My project aims to detect hand gestures using the camera of Android phone and
+recognize them using SVM classifier. Note that I only consider the static
+gestures, which essentially are hand postures. The app I developed also maps
 those gestures to some other pre-installed applications on the phone, enabling
 the user to launch any of them by doing the corresponding gesture.</p>
 
