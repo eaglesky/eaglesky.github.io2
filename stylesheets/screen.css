@@ -1,11 +1,11 @@
 /*
-Syntax error: Undefined mixin 'centered'.
-        on line 16 of /home/allenchin/GitProjects/octopress/sass/screen.scss, in `centered'
-        from line 16 of /home/allenchin/GitProjects/octopress/sass/screen.scss
+Syntax error: Undefined mixin 'rounded-border'.
+        on line 21 of /home/allenchin/GitProjects/octopress/sass/screen.scss, in `rounded-border'
+        from line 21 of /home/allenchin/GitProjects/octopress/sass/screen.scss
 
 Backtrace:
-/home/allenchin/GitProjects/octopress/sass/screen.scss:16:in `centered'
-/home/allenchin/GitProjects/octopress/sass/screen.scss:16
+/home/allenchin/GitProjects/octopress/sass/screen.scss:21:in `rounded-border'
+/home/allenchin/GitProjects/octopress/sass/screen.scss:21
 /var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
@@ -58,4 +58,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'centered'.\A         on line 16 of /home/allenchin/GitProjects/octopress/sass/screen.scss, in `centered'\A         from line 16 of /home/allenchin/GitProjects/octopress/sass/screen.scss"; }
+  content: "Syntax error: Undefined mixin 'rounded-border'.\A         on line 21 of /home/allenchin/GitProjects/octopress/sass/screen.scss, in `rounded-border'\A         from line 21 of /home/allenchin/GitProjects/octopress/sass/screen.scss"; }
