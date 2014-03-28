@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenCV | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/opencv/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T18:18:04-07:00</updated>
+  <updated>2014-03-27T18:19:04-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -51,7 +51,7 @@ the user to launch any of them by doing the corresponding gesture.</p>
 
 <h3 id="overview">Overview</h3>
 
-<p><img class="center" src="/images/posts/hand-gesture/workflow.jpg"></p>
+<p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500"></p>
 
 <p>My app starts with two pre-sampling steps, which collecting colors of
 background and the user’s hand using 7 small squares displayed on the screen.
