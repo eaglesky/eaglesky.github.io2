@@ -219,6 +219,13 @@ Using these coordinates and the bounding box, the center and
 radius of the inscribed circle of the contour can be computed. This part is quite
 computationally expensive and thus it is implemented in native C++ code. </p>
 
+<p><img class="center" src="/images/posts/hand-gesture/defects-elimination" width="400" />
+The locations of the fingertips are computed using the defect points. To do
+that, redundant defect points are eliminated by checking constraints on the depth and angle of the defect points and so on, as is shown in the above picture. Next the defect points left are reordered and the finger tips can be obtained from the
+returned coordinates of OpenCV functions. Finally the finger vectors are
+computed and divided by the radius of inscribe circle to get the final
+feature vector:</p>
+
 </div>
 
 
