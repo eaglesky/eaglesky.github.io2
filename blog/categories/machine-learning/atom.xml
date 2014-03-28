@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Machine Learning | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T10:05:40-07:00</updated>
+  <updated>2014-03-28T10:10:56-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -112,11 +112,28 @@ hand detection can be seen from the pictures captured, which display elements
 like the contour and finger vectors. Three frames are enough to see if these
 elements are correct and if they are stable or not.</p>
 
-<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/s1.jpg' width='' height='' title='600 Results in Scenario 1'><span class='caption-text'>600 Results in Scenario 1</span></span></p>
+<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/s1.jpg' width='600' height='691' title='Results in Scenario 1'><span class='caption-text'>Results in Scenario 1</span></span></p>
 
-<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/s2.jpg' width='' height='' title='600 Results in Scenario 2'><span class='caption-text'>600 Results in Scenario 2</span></span></p>
+<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/s2.jpg' width='600' height='691' title='Results in Scenario 2'><span class='caption-text'>Results in Scenario 2</span></span></p>
 
-<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/s3.jpg' width='' height='' title='600 Results in Scenario 3'><span class='caption-text'>600 Results in Scenario 3</span></span></p>
+<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/s3.jpg' width='600' height='691' title='Results in Scenario 3'><span class='caption-text'>Results in Scenario 3</span></span></p>
+
+<p>The app was tested in three scenarios and the results are shown in above
+figures. It can be seen that the app worked quite well in Scenario 1 and Scenario 3: all the predicted labels are correct and most of the gestures are detected correctly and quite stable, except there is one gesture
+not detected(Random error). And the main reason for the success is that there
+are sharp contrast in color between the background and the hand. Whether the
+background is cluttered or not does not matter, only the color matters.</p>
+
+<p>In Scenario 2 some of the gestures are not well-detected. The main cause for
+ this is that the yellow color in the background kind of interfere the extraction of contour of the hand. Also the auto adjustment of the camera became stronger in this scenario which is probably because of the
+ light.</p>
+
+<p>In summary, with the help of presampled colors, the app can detect and
+ recognize the hand quite well and stable in most of the lighting conditions
+ and backgrounds, as long as the contrast of the background and the hand is not
+ too poor. However the constraint is that they must keep the same once the
+ presample processes finish. And that means both of the hand and the phone
+ should not move too much, in order to avoid the change of the colors.</p>
 
 ]]></content>
   </entry>
