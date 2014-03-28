@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Computer Vision | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/computer-vision/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T11:08:35-07:00</updated>
+  <updated>2014-03-28T11:28:23-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -64,15 +64,15 @@ the two binary images and the result is blurred, dilated and eroded to eliminate
 <p>The features used to represent the hand are low-level features, which
 essentially are the finger vectors. To compute them, it is necessary to find out the
 locations of the palm center and the fingertips. Some of the OpenCV
-functions, can directly return the contour and convex hull points of the hand.
-Using these coordinates and the bounding box, the center and
+functions can directly return the contour and convex hull points of the hand
+from a binary image containing the segmented hand. Using these coordinates and the bounding box, the center and
 radius of the inscribed circle of the contour can be computed. This part is quite
 computationally expensive and thus it is implemented in native C++ code. </p>
 
 <p><img class="center" src="/images/posts/hand-gesture/defects-elimination.jpg" width="400"></p>
 
 <p>The locations of the fingertips are computed using the defect points. To do
-that, redundant defect points are eliminated by checking constraints on the depth and angle of the defect points and so on, as is shown in the above picture. Next the defect points left are reordered and the finger tips can be obtained from the
+so,  redundant defect points are eliminated by checking constraints on the depth and angle of the defect points and so on, as is shown in the above picture. Next the defect points left are reordered and the finger tips can be obtained from the
 returned coordinates of OpenCV functions. Finally the finger vectors are
 computed and divided by the radius of inscribe circle to get the final
 feature vector: <script type="math/tex">X = [x_0 / r, y_0 / r, x_1 / r, y_1/r ... x_4/r, y_4/r] </script>.</p>
@@ -173,6 +173,10 @@ based on texture-like features together with some machine learning methods.</p>
 
 <p>In addition, since low-level features are used to represent the gesture, some
 gestures can not be represented. Also it is hard to eliminate false-positives.</p>
+
+<h3 id="source-code">Source Code</h3>
+
+<p><a href="https://github.com/eaglesky/HandGestureApp">Here!</a></p>
 
 <h2 id="acknowledgments">Acknowledgments</h2>
 
