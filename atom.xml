@@ -4,7 +4,7 @@
   <title><![CDATA[Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T10:42:43-07:00</updated>
+  <updated>2014-03-28T11:08:35-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -144,6 +144,43 @@ background is cluttered or not does not matter, only the color matters.</p>
 </a>
 <div class="video-info">This is an app I developed to recognize hand gestures and let user call other apps using gestures. It basically uses color-based methods to detect the gestures and then classify them using SVM classifier. As you can see from the video, there are 18 gestures that can be recognized, and the gesture database can be further extended by the user.  This app works pretty well in many different scenarios as long as the contrast is not too poor. However,  change of lighting conditions and background colors will affect the performance. So the user must make sure the lighting condition is stable and the background doesn&#8217;t have colors very closed to the hand. More complete report and the source code of it will be uploaded in a few days.</div>
 </div>
+
+<h2 id="summary">Summary</h2>
+
+<h3 id="potential-improvements">Potential Improvements</h3>
+<ol>
+  <li>Build statistical model for the color of background and hand instead of
+simple sampling and summing.</li>
+  <li>Use adaptive thresholding to get the final binary image.</li>
+  <li>Add elimination process of skin-like parts like wrist, forearm and face.</li>
+  <li>Add feature representation for the “fist” gesture.</li>
+  <li>Make prediction according to probability, rather than directly output the
+prediction frame by frame. </li>
+</ol>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>Two most evident drawbacks mentioned before are influences of change in
+background colors and lighting conditions. One thing I found out is that the
+camera on the phone has auto-adjustment like auto-exposure and auto white
+balancing which change the color of the hand and background as the view or
+position of the hand changes. This makes color-based methods not desirable to
+be used on mobile phones. The only solution is either find ways to disable the auto adjustment, which I think is not possible on most of the devices, or abandon the methods and instead use hand detection methods
+based on texture-like features together with some machine learning methods.</p>
+
+<p>In addition, since low-level features are used to represent the gesture, some
+gestures can not be represented. Also it is hard to eliminate false-positives.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<ol>
+  <li>The idea of presampling is from Simen Andresen’s <a href="http://simena86.github.io/blog/2013/08/12/hand-tracking-and-recognition-with-opencv/">blog</a> </li>
+  <li>Used LibSVM on Android implemented by Kun Li.
+<a href="https://github.com/cnbuff410/Libsvm-androidjni">link</a></li>
+  <li>Used <a href="https://github.com/iPaulPro/aFileChooser">aFileChooser library</a> to
+implement the file chooser.</li>
+  <li>To implement mapping human gestures to Android apps, <a href="http://blog.csdn.net/qinjuning/article/details/6867806">this article</a> is quite helpful.</li>
+</ol>
 
 ]]></content>
   </entry>
