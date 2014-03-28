@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Project | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/project/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T22:11:10-07:00</updated>
+  <updated>2014-03-27T22:33:07-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -25,39 +25,18 @@ performance.</p>
 
 <!-- more -->
 
-<h2 id="introduction">Introduction</h2>
-
-<p>Nowadays mobile phones have been the most widely used and must-have electronic
-gadgets. In recent years, the way how users interact with mobile phones has
-evolved from QWERTY keyboards to touch screens. As is predicted by many people,
-touch-free technologies like hand gesture recognition could probably be the
-next user interface for mobile phones. This new interface gives a whole new way
-to users for interacting with their phones, and in some scenarios can make
-interaction easier than other ways. One possible situation is controlling the
-play of music in the phone remotely. This can be achieved by using gesture
-recognition as long as the hand is in the view of the camera. Another situation
-is interacting with the phone when using the touch screen is not desirable. For
-example, when the user is eating, his hands are probably dirty and greasy. It
-will be much better and safer for the screen if the user can still use the
-phone without touching it.</p>
-
-<p>The project aims to detect hand gestures using the camera of Android phone and
-recognize them using SVM classifier. Note that only the static
-gestures are considered, which essentially are hand postures. The app also maps
-those gestures to some other pre-installed applications on the phone, enabling
-the user to launch any of them by doing the corresponding gesture.</p>
-
-<h2 id="methodology">Methodology</h2>
-
-<h3 id="overview">Overview</h3>
+<h2 id="overview">Overview</h2>
 
 <p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" ></p>
 
-<p>The picture above shows the overall workflow of the project. The app starts with two pre-sampling steps, which collecting colors of background and the user’s hand using 7 small squares displayed on the screen.
-These color data will be used to compute the threshold to get the binary image
-from the input RGBA data. Since it is a constant, the color of user’s hand and
+<h2 id="presampling">Presampling</h2>
+<p><img class="center" src="/images/posts/hand-gesture/presampled_back.jpg" width="400">
+<img class="center" src="/images/posts/hand-gesture/presampled_hand.jpg" width="400"></p>
+
+<p>The app starts with two pre-sampling steps, which collect colors of background and the user’s hand using 7 small squares displayed on the screen. These color data are used to compute the thresholds to get the binary image
+from the input RGBA data. Since they are constants, the color of user’s hand and
 the background must be stable in order to make sure the hand could be well
-segmented. Therefore stable colors is the first assumption of the project. </p>
+segmented.  </p>
 
 <p>After the binary image is obtained, the contours can be extracted from it. To make sure
 the major contour comes from the hand, it is assumed that there
@@ -72,6 +51,37 @@ so that his face will not be in the view of the camera.</p>
 fingertips can be obtained from the contour and convex hull. Then the feature
 vector is computed from these coordinates. The feature vector representation is essentially
 a normalized skeleton of the hand. An initial database consisting of the data of 18 gestures is built and a SVM training model is generated for testing.</p>
+
+<h1 id="hand-segmentation">Hand Segmentation</h1>
+
+<p>To segment the hand from the background, it is important to find the right
+threshold so that the shape of the hand is complete. Since the color of hand
+varies from person to person, and even for the same person, the color of his
+hand could vary in different lighting conditions.  Therefore, the threshold
+must not be a constant. For simplicity, adaptive method was not used to find
+the best threshold. Instead, the user is asked to put his hand close to the screen
+to cover the 7 squares so that the  program could get the color data of the
+hand. Note that the number of squares is just an empirical value and it could
+be other value. After the 7 color data for the hand , we can compute 7
+upper and lower boundaries for the hand area by giving a range to them, which
+can be represented as a 6 dimensional vector. The bounding vector is determined
+by the developer and could not be changed. Therefore, the performance of the
+segmentation actually depends on the choice of the bounding vector. To better
+understand the influence of each element of the vector on the segmentation
+performance, we converted the original RGB color space to many other color
+spaces like HSV, YCrCb, CIE L*a*b*. Since for the same hand, the color usually
+varies most on the lighting dimension and smaller on hue and other color
+dimensions, the desirable color space should be able to separate them. After
+some experiments we found that the three color spaces listed all performed
+quite well, but it is easier for us to find the best bounding vector by using
+Lab space. Thus we decided to use this color space.</p>
+
+<p>After we get the boundaries for each of the 7 color data, we can threshold to
+get 7 binary images of the hand. Next we sum them up by doing the logical
+operation “or” on those images. We do the same thing on the background color
+thresholding and do the logical operation “and” on the two binary images. To
+eliminate the noise, we apply blurring, dilation and erosion on the binary
+image and finally get a better result(Figure 3.2).</p>
 
 ]]></content>
   </entry>
