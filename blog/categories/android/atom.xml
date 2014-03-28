@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T18:11:46-07:00</updated>
+  <updated>2014-03-27T18:16:56-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -50,6 +50,8 @@ the user to launch any of them by doing the corresponding gesture.</p>
 <h2 id="methodology">Methodology</h2>
 
 <h3 id="overview">Overview</h3>
+
+<p><img class="center" src="/images/posts/hand_gesture/workflow.jpg"></p>
 
 <p>My app starts with two pre-sampling steps, which collecting colors of
 background and the user’s hand using 7 small squares displayed on the screen.
