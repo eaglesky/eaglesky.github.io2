@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Project | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/project/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T09:37:15-07:00</updated>
+  <updated>2014-03-28T09:40:35-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -74,7 +74,7 @@ The locations of the fingertips are computed using the defect points. To do
 that, redundant defect points are eliminated by checking constraints on the depth and angle of the defect points and so on, as is shown in the above picture. Next the defect points left are reordered and the finger tips can be obtained from the
 returned coordinates of OpenCV functions. Finally the finger vectors are
 computed and divided by the radius of inscribe circle to get the final
-feature vector:</p>
+feature vector: <script type="math/tex">X = [x_0 / r, y_0 / r, x_1 / r, y_1/r ... x_4/r, y_4/r] </script>.</p>
 
 ]]></content>
   </entry>
