@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Project | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/project/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T11:59:45-07:00</updated>
+  <updated>2014-03-28T12:16:52-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -91,7 +91,7 @@ detected. It can be counted as representing a negative example. It also reveals
 one of the limitations that the “fist” gesture can not be recognized. </p>
 
 <p>The user can add whatever gestures they like to the initial data set or build
-another one using our application. The training process can be conducted in
+another one using the application. The training process can be conducted in
 any conditions as long as the hand can be well detected. Due to time
 constraint, very few number of frames are collected for each gesture(Only
 10 frames). Multi-class SVM is used to build the training model and make
