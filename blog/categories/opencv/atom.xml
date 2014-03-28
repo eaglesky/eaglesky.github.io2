@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenCV | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/opencv/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T10:10:56-07:00</updated>
+  <updated>2014-03-28T10:42:43-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -135,6 +135,18 @@ background is cluttered or not does not matter, only the color matters.</p>
  presample processes finish. And that means both of the hand and the phone
  should not move too much, in order to avoid the change of the colors.</p>
 
+<h2 id="demo">Demo</h2>
+
+<p>
+<div class="ratio-4-3 embed-video-container" onclick="var myAnchor = document.getElementById('PF6hY-0VuN4');var tmpDiv = document.createElement('div');tmpDiv.innerHTML = '&lt;iframe style=&quot;vertical-align:top;width:100%;height:100%;position:absolute;&quot; src=&quot;http://www.youtube.com/embed/PF6hY-0VuN4?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;';myAnchor.parentNode.replaceChild(tmpDiv.firstChild, myAnchor);return false;" title="click here to play">
+<a class="youtube-lazy-link" style="width:100%;height:100%;background:#000 url(http://i2.ytimg.com/vi/PF6hY-0VuN4/0.jpg) center center no-repeat;background-size:contain;position:absolute" href="http://www.youtube.com/watch?v=PF6hY-0VuN4" id="PF6hY-0VuN4" onclick="return false;">
+<div class="youtube-lazy-link-div"></div>
+<div class="youtube-lazy-link-info">Hand gesture recognition using OpenCV on Android</div>
+</a>
+<div class="video-info" >This is an app I developed to recognize hand gestures and let user call other apps using gestures. It basically uses color-based methods to detect the gestures and then classify them using SVM classifier. As you can see from the video, there are 18 gestures that can be recognized, and the gesture database can be further extended by the user.  This app works pretty well in many different scenarios as long as the contrast is not too poor. However,  change of lighting conditions and background colors will affect the performance. So the user must make sure the lighting condition is stable and the background doesn't have colors very closed to the hand. More complete report and the source code of it will be uploaded in a few days.</div>
+</div>
+
+</p>
 ]]></content>
   </entry>
   
