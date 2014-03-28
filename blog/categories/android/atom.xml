@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T21:25:13-07:00</updated>
+  <updated>2014-03-27T22:11:10-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -19,8 +19,8 @@
     <updated>2014-03-27T14:40:57-07:00</updated>
     <id>http://eaglesky.github.io/blog/2014/03/27/color-based-hand-gesture-recognition-on-android</id>
     <content type="html"><![CDATA[<p>This is my course project for CS290I in UCSB. The aim is to detect and recognize
-user-defined gestures using the camera of Android phone. I developed a simple
-demo that let user call other applications using gestures to show the real time
+user-defined gestures using the camera of Android phone. A simple
+demo that let user call other applications using gestures is developed to show the real time
 performance.</p>
 
 <!-- more -->
@@ -41,9 +41,9 @@ example, when the user is eating, his hands are probably dirty and greasy. It
 will be much better and safer for the screen if the user can still use the
 phone without touching it.</p>
 
-<p>My project aims to detect hand gestures using the camera of Android phone and
-recognize them using SVM classifier. Note that I only consider the static
-gestures, which essentially are hand postures. The app I developed also maps
+<p>The project aims to detect hand gestures using the camera of Android phone and
+recognize them using SVM classifier. Note that only the static
+gestures are considered, which essentially are hand postures. The app also maps
 those gestures to some other pre-installed applications on the phone, enabling
 the user to launch any of them by doing the corresponding gesture.</p>
 
@@ -51,30 +51,27 @@ the user to launch any of them by doing the corresponding gesture.</p>
 
 <h3 id="overview">Overview</h3>
 
-<p><span class='caption-wrapper'><img class='caption' src='/images/posts/hand-gesture/workflow.jpg' width='500' height='310' title='Figure 2.1 Overview'><span class='caption-text'>Figure 2.1 Overview</span></span></p>
+<p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" ></p>
 
-<p>My app starts with two pre-sampling steps, which collecting colors of
-background and the user’s hand using 7 small squares displayed on the screen.
+<p>The picture above shows the overall workflow of the project. The app starts with two pre-sampling steps, which collecting colors of background and the user’s hand using 7 small squares displayed on the screen.
 These color data will be used to compute the threshold to get the binary image
 from the input RGBA data. Since it is a constant, the color of user’s hand and
 the background must be stable in order to make sure the hand could be well
-segmented. Therefore stable colors is the first assumption I made. </p>
+segmented. Therefore stable colors is the first assumption of the project. </p>
 
-<p>After the binary image is obtained, I can extract the contours in it. To make sure
-the major contour comes from the hand, I made our second assumption that there
+<p>After the binary image is obtained, the contours can be extracted from it. To make sure
+the major contour comes from the hand, it is assumed that there
 are no other objects which have similar color with the user’s hand. And this
-means that user’s face must not be in the view of the camera. I believe it
-won’t cause much inconvenience to the user since the view of  the camera on
+means that user’s face must not be in the view of the camera. It
+should not cause much inconvenience to the user since the view of  the camera on
 the phone is actually quite small compared to those cameras on other devices.
 Also because of the portability of the phone, user can easily adjust the angle
 so that his face will not be in the view of the camera.</p>
 
-<p>By using some OpenCV functions, I can get the coordinates of palm center and
-fingertips from the contour and convex hull. Then I can compute the feature
-vector from these coordinates. The feature vector representation is essentially
-a normalized skeleton of the hand. By collecting the data of 18 gestures, I
-built a initial database and generated a SVM training model for testing(Figure
-3.1).</p>
+<p>With the help of some OpenCV functions, the coordinates of palm center and
+fingertips can be obtained from the contour and convex hull. Then the feature
+vector is computed from these coordinates. The feature vector representation is essentially
+a normalized skeleton of the hand. An initial database consisting of the data of 18 gestures is built and a SVM training model is generated for testing.</p>
 
 ]]></content>
   </entry>
