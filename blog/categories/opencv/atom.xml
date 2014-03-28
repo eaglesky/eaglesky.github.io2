@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenCV | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/opencv/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T22:39:49-07:00</updated>
+  <updated>2014-03-27T22:40:25-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -30,7 +30,7 @@ performance.</p>
 <p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" ></p>
 
 <h2 id="presampling">Presampling</h2>
-<p><img class="center" src="/images/posts/hand-gesture/presampled-back.jpg" width="300"> <img class="center" src="/images/posts/hand-gesture/presampled-hand.jpg" width="300"></p>
+<p><img class="left" src="/images/posts/hand-gesture/presampled-back.jpg" width="300"> <img class="right" src="/images/posts/hand-gesture/presampled-hand.jpg" width="300"></p>
 
 <p>The app starts with two pre-sampling steps, which collect colors of background and the user’s hand using 7 small squares displayed on the screen. These color data are used to compute the thresholds to get the binary image
 from the input RGBA data. Since they are constants, the color of user’s hand and
