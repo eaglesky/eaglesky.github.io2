@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Computer Vision | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/computer-vision/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T23:04:04-07:00</updated>
+  <updated>2014-03-27T23:04:22-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -51,7 +51,7 @@ some experiments the three color spaces listed are all found to perform
 quite well, but it is easier to find the best bounding vector by using
 Lab space. Therefore this color space is chosen.</p>
 
-<p><img class="center" src="/images/posts/hand-gesture/thresholding-back.jpg" width="400"></p>
+<p><img class="center" src="/images/posts/hand-gesture/thresholding-back.jpg" width="500"></p>
 
 <p>After the boundaries for each of the 7 color data are obtained, 7 binary images of the hand can be computed, which are then summed up using logical operation “or”. The same thing are done on the background color
 , producing another binary image. The logical operation “and” is then done on
