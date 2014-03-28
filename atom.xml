@@ -4,7 +4,7 @@
   <title><![CDATA[Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T22:41:03-07:00</updated>
+  <updated>2014-03-27T22:44:30-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -30,26 +30,12 @@ performance.</p>
 <p><img class="center" src="http://eaglesky.github.io/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" /></p>
 
 <h2 id="presampling">Presampling</h2>
-<p><img class="left" src="http://eaglesky.github.io/images/posts/hand-gesture/presampled-back.jpg" width="400" /> <img class="right" src="http://eaglesky.github.io/images/posts/hand-gesture/presampled-hand.jpg" width="400" /></p>
+<p><img class="left" src="http://eaglesky.github.io/images/posts/hand-gesture/presampled-back.jpg" width="380" /> <img class="right" src="http://eaglesky.github.io/images/posts/hand-gesture/presampled-hand.jpg" width="380" /></p>
 
 <p>The app starts with two pre-sampling steps, which collect colors of background and the user’s hand using 7 small squares displayed on the screen. These color data are used to compute the thresholds to get the binary image
-from the input RGBA data. Since they are constants, the color of user’s hand and
+from the input RGBA data. Since they are constants once the colors are sampled, the colors of user’s hand and
 the background must be stable in order to make sure the hand could be well
 segmented.  </p>
-
-<p>After the binary image is obtained, the contours can be extracted from it. To make sure
-the major contour comes from the hand, it is assumed that there
-are no other objects which have similar color with the user’s hand. And this
-means that user’s face must not be in the view of the camera. It
-should not cause much inconvenience to the user since the view of  the camera on
-the phone is actually quite small compared to those cameras on other devices.
-Also because of the portability of the phone, user can easily adjust the angle
-so that his face will not be in the view of the camera.</p>
-
-<p>With the help of some OpenCV functions, the coordinates of palm center and
-fingertips can be obtained from the contour and convex hull. Then the feature
-vector is computed from these coordinates. The feature vector representation is essentially
-a normalized skeleton of the hand. An initial database consisting of the data of 18 gestures is built and a SVM training model is generated for testing.</p>
 
 <h1 id="hand-segmentation">Hand Segmentation</h1>
 
