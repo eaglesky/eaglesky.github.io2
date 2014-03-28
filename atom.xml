@@ -4,7 +4,7 @@
   <title><![CDATA[Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T09:50:34-07:00</updated>
+  <updated>2014-03-28T10:05:40-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -94,7 +94,30 @@ one of the limitations that the “fist” gesture can not be recognized. </p>
 another one using our application. The training process can be conducted in
 any conditions as long as the hand can be well detected. Due to time
 constraint, very few number of frames are collected for each gesture(Only
-10 frames). Multi-class SVM is used to build the training model.</p>
+10 frames). Multi-class SVM is used to build the training model and make
+predictions.</p>
+
+<h2 id="results-and-analysis">Results and Analysis</h2>
+
+<p>To show the results, several tests were conducted in different lighting conditions and
+different backgrounds. For each gesture, 3 frames were captured together with the
+predicted labels shown as the red numbers in the photos. Three frames are far
+less than enough to prove the accuracy. However according to observation,
+the final recognition result highly depends on the detection result. In other
+words, if the hand is well-detected, which means the extracted feature vector
+correctly represents the hand gesture, then the hand can be classified into the
+right category with high probability. Therefore what really matters is actually the
+performance of hand detection rather than that of hand recognition. The performance of
+hand detection can be seen from the pictures captured, which display elements
+like the contour and finger vectors. Three frames are enough to see if these
+elements are correct and if they are stable or not.</p>
+
+<p><span class="caption-wrapper"><img class="caption" src="http://eaglesky.github.io/images/posts/hand-gesture/s1.jpg" width="" height="" title="600 Results in Scenario 1" /><span class="caption-text">600 Results in Scenario 1</span></span></p>
+
+<p><span class="caption-wrapper"><img class="caption" src="http://eaglesky.github.io/images/posts/hand-gesture/s2.jpg" width="" height="" title="600 Results in Scenario 2" /><span class="caption-text">600 Results in Scenario 2</span></span></p>
+
+<p><span class="caption-wrapper"><img class="caption" src="http://eaglesky.github.io/images/posts/hand-gesture/s3.jpg" width="" height="" title="600 Results in Scenario 3" /><span class="caption-text">600 Results in Scenario 3</span></span></p>
+
 ]]></content>
   </entry>
   
