@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenCV | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/opencv/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T23:08:24-07:00</updated>
+  <updated>2014-03-27T23:14:55-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -30,7 +30,7 @@ performance.</p>
 <p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" ></p>
 
 <h2 id="presampling-and-hand-segmentation">Presampling and Hand Segmentation</h2>
-<p><img class="left" src="/images/posts/hand-gesture/presampled-back.jpg" width="380"> <img class="right" src="/images/posts/hand-gesture/presampled-hand.jpg" width="360"></p>
+<p><img class="left" src="/images/posts/hand-gesture/presampled-back.jpg" width="380"> <img class="left" src="/images/posts/hand-gesture/presampled-hand.jpg" width="380"></p>
 
 <p>The app starts with two pre-sampling steps, which collect colors of background and the user’s hand using 7 small squares displayed on the screen. These color data are used to compute the thresholds to get the binary image
 from the input RGBA data. For simplicity, adaptive method was not used to find
@@ -55,7 +55,17 @@ Lab space. Therefore this color space is chosen.</p>
 
 <p>After the boundaries for each of the 7 color data are obtained, 7 binary images of the hand can be computed, which are then summed up using logical operation “or”. The same thing are done on the background color
 , producing another binary image. The logical operation “and” is then done on
-the two binary images and the result is blurred, dilated and eroded to eliminate noises, and finally the result is obtained, as is shown in the above picture.</p>
+the two binary images and the result is blurred, dilated and eroded to eliminate noises, and the final binary image is obtained, as is shown in the above picture.</p>
+
+<h2 id="feature-extraction">Feature Extraction</h2>
+
+<p>The features used to represent the hand are low-level features, which
+essentially are the finger vectors. To compute them, it is necessary to find out the
+locations of the palm center and the fingertips. Some of the OpenCV
+functions, can directly return the contour and convex hull points of the hand.
+Using these coordinates and the bounding box, the center and
+radius of the inscribed circle of the contour can be computed. This part is quite
+computationally expensive and thus it is implemented in native C++ code. </p>
 
 ]]></content>
   </entry>
