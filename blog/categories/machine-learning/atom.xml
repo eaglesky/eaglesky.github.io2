@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Machine Learning | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T23:05:48-07:00</updated>
+  <updated>2014-03-27T23:07:40-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -30,7 +30,7 @@ performance.</p>
 <p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" ></p>
 
 <h2 id="presampling-and-hand-segmentation">Presampling and Hand Segmentation</h2>
-<p><img class="left" src="/images/posts/hand-gesture/presampled-back.jpg" width="360"> <img class="right" src="/images/posts/hand-gesture/presampled-hand.jpg" width="360"></p>
+<p><img class="left" src="/images/posts/hand-gesture/presampled-back.jpg" width="370"> <img class="right" src="/images/posts/hand-gesture/presampled-hand.jpg" width="360"></p>
 
 <p>The app starts with two pre-sampling steps, which collect colors of background and the user’s hand using 7 small squares displayed on the screen. These color data are used to compute the thresholds to get the binary image
 from the input RGBA data. For simplicity, adaptive method was not used to find
