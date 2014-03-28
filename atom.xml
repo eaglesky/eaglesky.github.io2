@@ -4,7 +4,7 @@
   <title><![CDATA[Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T14:56:34-07:00</updated>
+  <updated>2014-03-27T17:59:25-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -46,6 +46,33 @@ recognize them using SVM classifier. Note that I only consider the static
 gestures, which essentially are hand postures. The app I developed also maps
 those gestures to some other pre-installed applications on the phone, enabling
 the user to launch any of them by doing the corresponding gesture.</p>
+
+<h2 id="methodology">Methodology</h2>
+
+<h3 id="overview">Overview</h3>
+
+<p>My app starts with two pre-sampling steps, which collecting colors of
+background and the user’s hand using 7 small squares displayed on the screen.
+These color data will be used to compute the threshold to get the binary image
+from the input RGBA data. Since it is a constant, the color of user’s hand and
+the background must be stable in order to make sure the hand could be well
+segmented. Therefore stable colors is the first assumption we made. </p>
+
+<p>After the binary image is obtained, I can extract the contours in it. To make sure
+the major contour comes from the hand, I made our second assumption that there
+are no other objects which have similar color with the user’s hand. And this
+means that user’s face must not be in the view of the camera. I believe it
+won’t cause much inconvenience to the user since the view of  the camera on
+the phone is actually quite small compared to those cameras on other devices.
+Also because of the portability of the phone, user can easily adjust the angle
+so that his face will not be in the view of the camera.</p>
+
+<p>By using some OpenCV functions, I can get the coordinates of palm center and
+fingertips from the contour and convex hull. Then I can compute the feature
+vector from these coordinates. The feature vector representation is essentially
+a normalized skeleton of the hand. By collecting the data of 18 gestures, I
+built a initial database and generated a SVM training model for testing(Figure
+3.1).</p>
 
 ]]></content>
   </entry>
