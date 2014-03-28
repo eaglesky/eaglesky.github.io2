@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenCV | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/opencv/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T09:41:25-07:00</updated>
+  <updated>2014-03-28T09:50:34-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -77,6 +77,24 @@ returned coordinates of OpenCV functions. Finally the finger vectors are
 computed and divided by the radius of inscribe circle to get the final
 feature vector: <script type="math/tex">X = [x_0 / r, y_0 / r, x_1 / r, y_1/r ... x_4/r, y_4/r] </script>.</p>
 
+<h2 id="training-set">Training Set</h2>
+
+<p><img class="center" src="/images/posts/hand-gesture/training-set.jpg" width="500"></p>
+
+<p>Currently 19 gestures have been collected to constitute the initial data
+set, as is shown in above figure. Note that although the extracted feature vector is
+invariant to different size of hand, it is variant to different orientations
+since gestures of different orientations are treated as different gestures. Also
+it can be seen from above figure that the “gesture” labeled as 0 is actually not a
+gesture. The label 0 is reserved to represent anything whose features are not
+detected. It can be counted as representing a negative example. It also reveals
+one of the limitations that the “fist” gesture can not be recognized. </p>
+
+<p>The user can add whatever gestures they like to the initial data set or build
+another one using our application. The training process can be conducted in
+any conditions as long as the hand can be well detected. Due to time
+constraint, very few number of frames are collected for each gesture(Only
+10 frames). Multi-class SVM is used to build the training model.</p>
 ]]></content>
   </entry>
   
