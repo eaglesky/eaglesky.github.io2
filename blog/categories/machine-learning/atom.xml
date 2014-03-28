@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Machine Learning | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-28T12:16:52-07:00</updated>
+  <updated>2014-03-28T13:47:43-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -143,7 +143,9 @@ background is cluttered or not does not matter, only the color matters.</p>
 <div class="youtube-lazy-link-div"></div>
 <div class="youtube-lazy-link-info">Hand gesture recognition using OpenCV on Android</div>
 </a>
-<div class="video-info" >This is an app I developed to recognize hand gestures and let user call other apps using gestures. It basically uses color-based methods to detect the gestures and then classify them using SVM classifier. As you can see from the video, there are 18 gestures that can be recognized, and the gesture database can be further extended by the user.  This app works pretty well in many different scenarios as long as the contrast is not too poor. However,  change of lighting conditions and background colors will affect the performance. So the user must make sure the lighting condition is stable and the background doesn't have colors very closed to the hand. More complete report and the source code of it will be uploaded in a few days.</div>
+<div class="video-info" >This is an app that can recognize hand gestures and let user call other apps using gestures. It basically uses color-based methods to detect the gestures and then classify them using SVM classifier. As you can see from the video, there are 18 gestures that can be recognized, and the gesture database can be further extended by the user.  This app works pretty well in many different scenarios as long as the contrast is not too poor. However,  change of lighting conditions and background colors will affect the performance. So the user must make sure the lighting condition is stable and the background doesn't have colors very closed to the hand.
+
+Report and code and be found at: http://eaglesky.github.io/blog/2014/03/27/color-based-hand-gesture-recognition-on-android/</div>
 </div>
 
 </p>
