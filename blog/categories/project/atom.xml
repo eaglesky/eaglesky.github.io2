@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Project | Eaglesky's Blog]]></title>
   <link href="http://eaglesky.github.io/blog/categories/project/atom.xml" rel="self"/>
   <link href="http://eaglesky.github.io/"/>
-  <updated>2014-03-27T23:14:55-07:00</updated>
+  <updated>2014-03-27T23:16:53-07:00</updated>
   <id>http://eaglesky.github.io/</id>
   <author>
     <name><![CDATA[Yalun Qin]]></name>
@@ -27,7 +27,7 @@ performance.</p>
 
 <h2 id="overview">Overview</h2>
 
-<p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Figure 2.1 Overview" ></p>
+<p><img class="center" src="/images/posts/hand-gesture/workflow.jpg" width="500" height="310" title="Architecture for Hand Gesture Recognition on Android" ></p>
 
 <h2 id="presampling-and-hand-segmentation">Presampling and Hand Segmentation</h2>
 <p><img class="left" src="/images/posts/hand-gesture/presampled-back.jpg" width="380"> <img class="left" src="/images/posts/hand-gesture/presampled-hand.jpg" width="380"></p>
